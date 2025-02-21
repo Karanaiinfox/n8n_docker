@@ -83,6 +83,11 @@ services:
     hostname: n8n
     container_name: n8n
     restart: unless-stopped
+    environment:
+      - N8N_SECURE_COOKIE=false
+      - N8N_HOST=16.171.4.24
+      - N8N_PORT=5678
+      - N8N_PROTOCOL=http
     ports:
       - 5678:5678
     volumes:
